@@ -133,6 +133,7 @@ class ResultSet(list, ColumnGuesserMixin):
                     '%s\n<span style="font-style:italic;text-align:center;">%d rows, truncated to displaylimit of %d</span>'
                     % (result, len(self), self.config.displaylimit)
                 )
+            result = '<div class="ipython-sql">%s</div>' % result
             return result
         else:
             return None
